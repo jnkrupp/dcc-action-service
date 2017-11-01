@@ -11,4 +11,4 @@ before_install:
 script:
  - cd dcc-action-service
  - cd luigi_task_executor
- - docker build -t justin_action_service_image -f .
+ - docker build -t justin_action_service_image -f Dockerfile_decider .
