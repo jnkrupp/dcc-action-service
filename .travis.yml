@@ -1,7 +1,13 @@
-language: python
-
 sudo: required
 
 services:
  - docker
 
+language: python
+
+before_install:
+ - git clone https://github.com/jnkrupp/dcc-action-service.git
+
+after_success:
+ - cd dcc-action-service
+ - docker build -t justin_action_service_image -f .
