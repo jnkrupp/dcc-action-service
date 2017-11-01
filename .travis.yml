@@ -10,4 +10,5 @@ before_install:
 
 after_success:
  - cd dcc-action-service
+ - cd luigi_task_executor
  - docker build -t justin_action_service_image -f .
