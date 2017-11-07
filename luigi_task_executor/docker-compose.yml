@@ -1,0 +1,24 @@
+version: '2'
+
+services:
+  dcc-action-service:
+    environment:
+      ELASTIC_SEARCH_SERVER: "${elastic_search_server}"
+      ELASTIC_SEARCH_PORT: "${elastic_search_port}"
+    build: .
+    ports:
+  elasticsearch1:
+    image: docker.elastic.co/elasticsearch/elasticsearch:5.6.3
+    container_name: "elasticsearch1"
+    environment:
+      - "discovery.type=single-node"
+      - "xpack.security.enabled=false"
+    ports:
+       - "9200:9200"
+       - "9300:9300"
+    networks:
+      - esnet
+
+networks:
+  esnet:
+    driver: bridge    
