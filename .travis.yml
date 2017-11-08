@@ -13,7 +13,6 @@ before_install:
 # - docker-compose help
 script:
  - cd dcc-action-service
- - cd luigi_task_executor
 # - docker build -t justin_action_service_image -f Dockerfile_decider .
  - docker-compose -f docker-compose.yml up --build -d
  - docker-compose -f docker-compose.yml down
