@@ -8,10 +8,10 @@ language: python
 before_install:
  - sudo apt-get update
  - git clone https://github.com/jnkrupp/dcc-action-service.git
-# - docker-compose up --build -d
-# - docker-compose down
+ - docker-compose up --build -d -f docker-compose.yml
+ - docker-compose down -f docker-compose.yml
  - docker-compose help
 script:
  - cd dcc-action-service
  - cd luigi_task_executor
- - docker build -t justin_action_service_image -f Dockerfile_decider .
+# - docker build -t justin_action_service_image -f Dockerfile_decider .
