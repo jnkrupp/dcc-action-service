@@ -15,6 +15,6 @@ script:
  - cd dcc-action-service
  - cd luigi_task_executor
 # - docker build -t justin_action_service_image -f Dockerfile_decider .
- - docker-compose up --build -d .
+ - docker-compose up --build -d docker-compose.yml
  - docker-compose down
 
