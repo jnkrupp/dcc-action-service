@@ -7,8 +7,8 @@ language: python
 
 before_install:
  - sudo apt-get update
- - git clone https://github.com/jnkrupp/dcc-action-service.git
  - git checkout feature/add-travisci
+ - git clone https://github.com/jnkrupp/dcc-action-service.git
 # - docker-compose -f docker-compose.yml up --build -d
 # - docker-compose -f docker-compose.yml down
 # - docker-compose help
