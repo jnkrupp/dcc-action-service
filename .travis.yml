@@ -14,6 +14,6 @@ before_install:
 script:
  - cd dcc-action-service
 # - docker build -t justin_action_service_image -f Dockerfile_decider .
- - sudo docker-compose -f dcc-action-service/docker-compose.yml up --build -d
- - sudo docker-compose -f dcc-action-service/docker-compose.yml down
+ - sudo docker-compose -fdocker-compose.yml up --build -d
+ - sudo docker-compose -fdocker-compose.yml down
 
